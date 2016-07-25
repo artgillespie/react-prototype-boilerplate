@@ -1,16 +1,10 @@
-import React, { PropTypes } from 'react'
+import 'babel-polyfill'
+import React from 'react'
 import ReactDOM from 'react-dom'
-
-const App = ({ name }) => {
-  return (
-     <h1>Hello, {name}!</h1>
-  )
-}
-App.propTypes = {
-  name: PropTypes.string.isRequired,
-}
+import './less/style.less'
+import App from './containers/App'
 
 ReactDOM.render(
-  <App name='React' />,
+  <App />,
   document.getElementById('root')
 )
