@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import ReactDOM from 'react-dom'
 
-const App = props => {
+const App = ({ name }) => {
   return (
-    <h1>Hello, React!</h1>
+     <h1>Hello, {name}!</h1>
   )
+}
+App.propTypes = {
+  name: PropTypes.string.isRequired,
 }
 
 ReactDOM.render(
-  <App />,
+  <App name='React' />,
   document.getElementById('root')
 )
